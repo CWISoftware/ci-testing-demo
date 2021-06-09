@@ -18,13 +18,12 @@ pipeline {
             sh 'npm test'
           }
         }
+    }
 
-        post {
-            always {
-                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'Report dos Testes', reportTitles: ''])
-                cleanWs()
-            }
+    post {
+        always {
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'Report dos Testes', reportTitles: ''])
+            cleanWs()
         }
-
     }
 }
