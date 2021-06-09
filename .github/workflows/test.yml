@@ -8,8 +8,7 @@ on:
 jobs:
   test:
     # maquina onde o workflow será executado
-    runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.3-chrome89-ff86
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -17,9 +16,6 @@ jobs:
     - name: Cypress run
       uses: cypress-io/github-action@v2
       continue-on-error: true
-      with:
-        install-command: npm install
-        browser: chrome
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
