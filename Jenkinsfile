@@ -23,6 +23,7 @@ pipeline {
     post {
         always {
             publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'Report', reportTitles: 'Report'])
+            cleanWs()
         }
     }
 }
