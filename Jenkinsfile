@@ -9,15 +9,15 @@ pipeline {
         
         stage('SetUp') {
           steps {
+            sh 'npm ci'
+            sh 'npm run cy:verify'
             sh 'npm install'
           }
         }
 
         stage('Testes') {
           steps {
-            realtimeJUnit('Testes') {
-              sh 'npm run test:junit'
-            }
+            sh 'npm test'
           }
         }
     }
