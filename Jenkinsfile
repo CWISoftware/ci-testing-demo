@@ -11,7 +11,6 @@ pipeline {
           steps {
             sh 'npm ci'
             sh 'npm run cy:verify'
-            sh 'npm install'
           }
         }
 
