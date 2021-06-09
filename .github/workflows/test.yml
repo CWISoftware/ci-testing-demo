@@ -3,7 +3,7 @@ name: run_tests
 on:
   # executa esse workflow sempre que subir uma alteracao para a branch master
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
