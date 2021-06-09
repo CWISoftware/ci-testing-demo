@@ -15,7 +15,9 @@ pipeline {
 
         stage('Testes') {
           steps {
-            sh 'npm test'
+            realtimeJUnit('Testes') {
+              sh 'npm run test:junit'
+            }
           }
         }
     }
