@@ -3,10 +3,15 @@ image: cypress/base:10
 before_script:
     - npm install
 
+test:
+  stage: test
+  script:
+  - npm test
+
 pages:
-    stage: test
+    stage: deploy
     script:
-        - npm test
+       - echo 'deploy'
     artifacts:
         paths:
             - mochawesome-report
