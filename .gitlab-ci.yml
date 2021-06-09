@@ -4,16 +4,18 @@ before_script:
     - npm install
 
 test:
-  stage: test
-  script:
-  - npm test
+    stage: test
+    script:
+        - npm test
 
 pages:
     stage: deploy
     script:
-       - echo 'deploy'
+        - mkdir .public
+        - cp -r ./mochawesome-report .public
+        - mv .public public
     artifacts:
         paths:
-            - mochawesome-report
-    rules:
-        - when: always
+            - public
+        rules:
+            - when: always
