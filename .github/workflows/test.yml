@@ -9,6 +9,7 @@ jobs:
   build:
     # maquina onde o workflow será executado
     runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome89-ff86
 
     strategy:
       matrix:
@@ -25,6 +26,8 @@ jobs:
     - name: Cypress run
       uses: cypress-io/github-action@v2
       continue-on-error: true
+      with:
+        browser: chrome
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
