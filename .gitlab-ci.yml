@@ -1,0 +1,9 @@
+image: cypress/base:10
+
+before_script:
+    - npm install
+
+test:
+    script:
+        # - $(npm bin)/cypress run
+        - npm test

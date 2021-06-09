@@ -1,0 +1,10 @@
+{
+  "video": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+      "reportDir": "mochawesome-report",
+      "overwrite": false,
+      "html": true,
+      "json": false
+  }
+}
