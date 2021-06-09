@@ -1,13 +1,19 @@
 image: cypress/base:10
 
+stages:
+  - test
+  - deploy
+
 before_script:
     - npm install
 
 test:
+    stage: test
     script:
         - npm test
 
 pages:
-  artifacts:
-    paths:
-      - mochawesome-report
+    stage: deploy
+    artifacts:
+        paths:
+            - mochawesome-report
