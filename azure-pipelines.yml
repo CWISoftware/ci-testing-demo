@@ -15,11 +15,12 @@ steps:
   displayName: 'Instalar dependências'
 
 - script: |
-    npm test
+    npm run test:junit
   displayName: 'Executar testes'
 
-- task: PublishHtmlReport@1
+- task: PublishTestResults@2
   displayName: 'Report'
-  condition: always()
   inputs:
-    reportDir: '$(Build.SourcesDirectory)/mochawesome-report/index.html'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true

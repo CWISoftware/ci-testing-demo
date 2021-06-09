@@ -3,3 +3,4 @@ package-lock.json
 mochawesome-report
 **/*.png
 **/*.mp4
+*.xml
