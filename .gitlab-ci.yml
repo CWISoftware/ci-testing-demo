@@ -17,5 +17,5 @@ pages:
     artifacts:
         paths:
             - public
-        rules:
-            - when: always
+    rules:
+        - when: always
