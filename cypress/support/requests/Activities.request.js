@@ -3,7 +3,7 @@
 const POSTActivity = require('../../fixtures/payloads/POSTActivity.json')
 const PUTActivity = require('../../fixtures/payloads/PUTActivity.json')
 
-const url = "http://fakerestapi.azurewebsites.net/api";
+const url = "https://fakerestapi.azurewebsites.net/api/v1";
 
 class Activities {
 
