@@ -19,10 +19,11 @@ pipeline {
           }
         }
 
-        stage('Report') {
-          steps {
-              publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'Report dos Testes', reportTitles: ''])
-          }
+        post {
+            always {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'index.html', reportName: 'Report dos Testes', reportTitles: ''])
+                cleanWs()
+            }
         }
 
     }
