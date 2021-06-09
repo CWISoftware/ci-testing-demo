@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  test:
     # maquina onde o workflow será executado
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome89-ff86
