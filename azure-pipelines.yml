@@ -18,9 +18,8 @@ steps:
     npm test
   displayName: 'Executar testes'
 
-- task: publishhtmlreport@1
+- task: PublishHtmlReport@1
   displayName: 'Report'
   condition: always()
   inputs:
-    htmlType: 'genericHTML'
-    htmlPath: '$(Build.SourcesDirectory)/mochawesome-report/index.html'
+    reportDir: '$(Build.SourcesDirectory)/mochawesome-report/index.html'
