@@ -9,12 +9,12 @@ test:
         - npm test
     artifacts:
         paths:
-            - mochawesome-report
+            - mochawesome-report/
 
 pages:
     stage: deploy
     script:
-        - mv mochawesome-report public
+        - mv mochawesome-report/ public
     dependencies: 
         - test
     artifacts:
