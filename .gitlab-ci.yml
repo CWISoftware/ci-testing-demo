@@ -6,7 +6,7 @@ before_script:
 pages:
     stage: deploy
     script:
-        - npm test &
+        - npm test || true
         - ls
     artifacts:
         paths:
