@@ -15,6 +15,8 @@ pages:
     stage: deploy
     script:
         - mv mochawesome-report public
+    dependencies: 
+        - test
     artifacts:
         paths:
             - public
