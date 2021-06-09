@@ -7,7 +7,6 @@ pages:
     stage: deploy
     script:
         - npm test || true
-        - ls
     artifacts:
         paths:
             - mochawesome-report
