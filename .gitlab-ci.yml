@@ -7,13 +7,14 @@ test:
     stage: test
     script:
         - npm test
+    artifacts:
+        paths:
+            - mochawesome-report
 
 pages:
     stage: deploy
     script:
-        - mkdir .public
-        - cp -r ./mochawesome-report .public
-        - mv .public public
+        - mv mochawesome-report public
     artifacts:
         paths:
             - public
