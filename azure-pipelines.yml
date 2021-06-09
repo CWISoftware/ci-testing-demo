@@ -23,5 +23,5 @@ steps:
   condition: always()
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/*.xml'
     failTaskOnFailedTests: true
